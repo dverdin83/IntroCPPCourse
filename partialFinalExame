@@ -1,0 +1,57 @@
+// CSMC_140 Fial
+
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+
+const int TOTAL_PASS = 20; // global constant for counters aand array element declarators
+bool isFirstClass(int); // function protype for function which checks if seat number is firstclass
+
+void getSelection(string, int, const int); // function protype for get selection has switch statement in the def 
+
+int main()
+{
+
+	string name[TOTAL_PASS]; // 20 element array for passenger names parallel with others
+	int seat[TOTAL_PASS]; // parallelarray to hold seat numbers
+	bool isFirstClass[TOTAL_PASS]; // parallel array to let if passenger is in first class
+	int selection;
+
+	getSelection()
+
+
+}
+
+	bool isFirstClass(int seat) 
+	{
+		if (seat > 6) // tests if seat is greater than 6 returns true if so
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+void getSelection(string name, int selection, const int PASS) {
+	for (int index = 0; index < TOTAL_PASS; index++) { //input loop
+		cout << endl;
+		cout << "What's your name?" << endl;
+		cout << "Welcome to ABC Airline would you like a first class or economy seat (1 for first or 2 for econ)?" << endl; //prompt
+		cin >> selection[index];
+		if (cin.fail() || cin.get() != '\n' || fmod(selection[index], 1) != 0 || selection[index] < 1 || hourAmount[index] > 2) { //validates input
+			cout << "Invalid Input put in a 1 or 2!" << endl;
+			cin.clear(); // clears fail
+			cin.ignore(10000, '\n');
+			index--; //sets counter index back to employee
+			continue; // returns asks for input again // ran out of time was going to have display function etc...  and parallel elements were going to going to test if greater than zero to see if seat was empty if not go again till arrays filled up then at end test for first class again  logics would have been right I think
+		}
+	}
+
+}
